@@ -1,0 +1,16 @@
+Package: aktools
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.8.0
+Author: Andrea Melloncelli
+Maintainer: Andrea Melloncelli <andrea.melloncelli@gmail>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GNU
+Encoding: UTF-8
+Imports:
+  utils,
+  futile.logger
+Depends:
+  futile.logger
+LazyData: true

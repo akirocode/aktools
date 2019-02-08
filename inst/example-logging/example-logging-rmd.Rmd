@@ -1,0 +1,54 @@
+---
+title: "Logging Rmd"
+author: "Andrea Melloncelli"
+date: "2/8/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r, include=FALSE}
+library(aktools)
+flog.threshold("debug")
+flog.appender(appender.tee("./example-logging-rmd.log"))
+flog.info("Reading inputs")
+ds <- mtcars
+```
+
+## Manipulation
+
+This function will take 5 seconds. And the time passed is in *example-logging-rmd.log*:
+
+```{r, include=FALSE}
+manipulation_function <- function(ds) {
+  Sys.sleep(1)
+  ds[,c('cyl','mpg')]
+}
+
+masterShinyRmd:::log_time("manipulation", {
+  ds_reduced <- manipulation_function(ds)
+})
+```
+
+```{r}
+ds_reduced
+```
+
+## R Markdown
+
+```{r cars}
+flog.info("Printing summaries")
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+flog.info("Plotting")
+plot(pressure)
+```

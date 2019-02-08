@@ -1,0 +1,6 @@
+
+INFO [2019-02-08 10:52:55] Reading inputs
+INFO [2019-02-08 10:53:02] Reading inputs
+DEBUG [2019-02-08 10:53:03] proc_time start manipulation...
+DEBUG [2019-02-08 10:53:04] proc_time stop manipulation: .
+DEBUG [2019-02-08 10:53:04] proc_time summary manipulation:    user  system elapsed    0.000   0.000   1.001 
