@@ -1,6 +1,9 @@
-
-INFO [2019-02-08 10:52:55] Reading inputs
-INFO [2019-02-08 10:53:02] Reading inputs
-DEBUG [2019-02-08 10:53:03] proc_time start manipulation...
-DEBUG [2019-02-08 10:53:04] proc_time stop manipulation: .
-DEBUG [2019-02-08 10:53:04] proc_time summary manipulation:    user  system elapsed    0.000   0.000   1.001 
+INFO [2019-02-08 12:08:02] Begin Rmd render ----------------------------
+INFO [2019-02-08 12:08:02] Reading inputs
+INFO [2019-02-08 12:08:02] Manipulating..
+DEBUG [2019-02-08 12:08:03] proc_time start manipulation...
+DEBUG [2019-02-08 12:08:08] proc_time stop manipulation: .
+DEBUG [2019-02-08 12:08:08] proc_time summary manipulation:    user  system elapsed    0.000   0.000   5.005 
+INFO [2019-02-08 12:08:08] Reading inputs
+INFO [2019-02-08 12:08:08] Plotting
+INFO [2019-02-08 12:08:08] End Rmd render ------------------------------

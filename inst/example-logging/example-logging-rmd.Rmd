@@ -13,7 +13,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r, include=FALSE}
 library(aktools)
 flog.threshold("debug")
-flog.appender(appender.tee("./example-logging-rmd.log"))
+flog.appender(appender.file("./example-logging-rmd.log"))
+flog.info("Begin Rmd render ----------------------------")
+
 flog.info("Reading inputs")
 ds <- mtcars
 ```
@@ -24,10 +26,11 @@ This function will take 5 seconds. And the time passed is in *example-logging-rm
 
 ```{r, include=FALSE}
 manipulation_function <- function(ds) {
-  Sys.sleep(1)
+  Sys.sleep(5)
   ds[,c('cyl','mpg')]
 }
 
+flog.info("Manipulating..")
 masterShinyRmd:::log_time("manipulation", {
   ds_reduced <- manipulation_function(ds)
 })
@@ -39,8 +42,12 @@ ds_reduced
 
 ## R Markdown
 
+```{r, include=FALSE}
+flog.info("Reading inputs")
+```
+
+
 ```{r cars}
-flog.info("Printing summaries")
 summary(cars)
 ```
 
@@ -52,3 +59,8 @@ You can also embed plots, for example:
 flog.info("Plotting")
 plot(pressure)
 ```
+
+```{r, include=FALSE}
+flog.info("End Rmd render ------------------------------")
+```
+
