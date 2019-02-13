@@ -9,8 +9,11 @@ Description: More about what it does (maybe more than one line)
 License: GNU
 Encoding: UTF-8
 Imports:
-  utils,
-  futile.logger
+    utils,
+    futile.logger,
+    stringr
 Depends:
   futile.logger
 LazyData: true
+Suggests: 
+    testthat
