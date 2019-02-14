@@ -43,7 +43,7 @@ ds_reduced
 ## R Markdown
 
 ```{r, include=FALSE}
-flog.info("Reading inputs")
+flog.info("Plotting summaries")
 ```
 
 

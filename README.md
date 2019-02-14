@@ -21,3 +21,11 @@ library(aktools)
 
 ```
 
+or install a specific immutable version (specific tag)
+
+```
+install.packages("devtools")
+devtools::install_github("akirocode/aktools@0.8.0")
+library(aktools)
+
+```
