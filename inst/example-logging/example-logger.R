@@ -43,3 +43,18 @@ log_time(label = "waiting 1 sec.", proc = {
 })
 
 
+
+# file --------------------------------------------------------------------
+
+flog.appender(appender.tee("./pippo.log"))
+
+
+# It has different level of severity
+
+flog.trace("message") # silent now
+flog.debug("message") # silent now
+flog.info("message")
+flog.warn("message")
+flog.error("message")
+flog.fatal("message")
+
